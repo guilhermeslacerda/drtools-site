@@ -7972,7 +7972,8 @@ a.text-dark:hover, a.text-dark:focus {
   .container {
     min-width: 992px !important; }
   .navbar {
-    display: none; }
+    display: none;
+ }
   .badge {
     border: 1px solid #000; }
   .table {
@@ -8050,7 +8051,6 @@ h1, h2, h3, h4, h5,
 .ftco-navbar-light {
   background: rgba(255, 255, 255, 0.5) !important;
   position: absolute;
-  top: 33px;
   left: 0;
   right: 0;
   z-index: 3;
@@ -8770,11 +8770,11 @@ textarea.form-control {
     display: inline-block; }
 
 .ftco-section {
-  padding: 7em 0;
+  padding: 4em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 4em 0; } }
 
 .ftco-no-pt {
   padding-top: 0 !important; }
