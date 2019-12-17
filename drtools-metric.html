@@ -58,7 +58,7 @@
 
                 <p>The vast majority of metric tools are server-side, requiring multiple configurations and environments to use.
                 The drtools-metric came up with this approach as a premise: simplicity. For this reason, it is a CLI (command-line interface) tool.
-                We believe the command line has great power and versatility.</p>
+                We believe the command line has great power and flexibility.</p>
                 <p>We have studied and selected some metrics that, combined, can give developers many insights before looking at the code. We also seek to bring a presentation that would make it easier for developers to analyze.
                 We defined a set of <a href="./materials.html">analysis heuristics based on these metrics</a> to facilitate and educate the developer in these investigations.
                 </p>
@@ -169,10 +169,10 @@
                     <li>Context-selected and sorted metrics</li>
                     <li>Supported languages: Java (for now)</li>
                     <li>Outputs in different formats: console, CSV, and JSON</li>
-                    <li>ease to filtering results (using the '--top X' option)</li>
+                    <li>ease of filtering results (using the '--top X' option)</li>
                     <li>Contextualized results, to facilitate the analysis and investigation (metric thresholds are available <a href="https://metric-visualization-demo.herokuapp.com/drtools-thresholds.html" target="_blank">here</a>)</li>
                     <li>To visualize graphs of project data, simply use <a href="drtools-metric-visualization.html">drtools-metric visualization</a>.
-                      To do so, you can generate the data using the <code>-mv</code> option and <code>--save</code> output.</li>
+                      To do so, you can generate the data using the <code>-mv</code> option and <code>--save</code> output format.</li>
                 </ul>                            
             </div>
             </div>
@@ -184,7 +184,7 @@
             <div class="row">
             <div class="col-lg-12 ftco-animate">
                 <h2 class="mb-3">Context and Metrics</h2>
-                <p>The drtools-metric presents the <b>33 metrics contextualized</b> by summary, namespaces, types, methods, dependencies and coupling. 
+                <p>The drtools-metric presents the <b>33 metrics contextualized</b> by summary, namespaces, types, methods, dependencies, and coupling. 
                     The following is the list of metrics by context:</p>
                 <ul>
                     <li><b>Summary (9):</b> Total of namespaces, total of types, mean number of types/namespaces, total of lines of code (SLOC), mean number of SLOC/types, total of methods, mean number of methods/types, total of complexity (CYCLO), and mean number of complexity/types</li>
@@ -207,7 +207,7 @@
           <div class="row">
           <div class="col-lg-12 ftco-animate">
               <h2 class="mb-3">Usage examples</h2>
-              <p>Below we list a number of examples of using drtools-metric features.</p>
+              <p>Below we list many examples of using drtools-metric features.</p>
               <ul>
                   <li>Viewing tool usage options</li>
                   <p><code>prompt> drtools-metric</code></p>
