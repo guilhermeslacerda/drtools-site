@@ -7,6 +7,8 @@
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     
@@ -21,6 +23,21 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      .text_table {
+          font-family: 'Poppins', Arial, sans-serif;
+          font-size: 13px;
+          line-height: 1.8;
+          font-weight: 400;
+          color: #000;
+      }
+      pre { 
+          font-size: 13px;
+          font-family: monospace; 
+          background-color: #c9c9c9;
+      }
+  </style>
+
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	
@@ -45,7 +62,7 @@
     <section class="ftco-section" id="header-section">
         <div class="col-md-12 text-center heading-section ftco-animate">
             <h2 class="mb-4"><span>drtools-metric</span></h2>
-            <h3>If I download a GitHub project, where are the biggest problems?  Where do I start the investigation?</h3>
+            <h3>How can I measure the health of source code?</h3>
         </div>
     </section>
     
@@ -54,15 +71,18 @@
             <div class="row">
             <div class="col-lg-12 ftco-animate">
                 <h2 class="mb-3">Description</h2>
-                <p>The drtools-metric was born from the need to be a simple tool that could help the developer with his daily work.</p>
+                <p>The DR-Tools Metric was born from the need to be a simple tool that could help developers in their daily work by 
+                  presenting metrics and statistics related to the code.</p>
 
-                <p>The vast majority of metric tools are server-side, requiring multiple configurations and environments to use.
-                The drtools-metric came up with this approach as a premise: simplicity. For this reason, it is a CLI (command-line interface) tool.
-                We believe the command line has great power and flexibility.</p>
-                <p>We have studied and selected some metrics that, combined, can give developers many insights before looking at the code. We also seek to bring a presentation that would make it easier for developers to analyze.
-                We defined a set of <a href="./materials.html">analysis heuristics based on these metrics</a> to facilitate and educate the developer in these investigations.
-                </p>
-
+                <p>The vast majority of metric tools are server-side, requiring multiple configurations and environments to be used. 
+                  The DR-Tools Metric is a straightforward command-line interface (CLI) tool. 
+                  We believe that the command line holds great power and flexibility.</p>
+                  
+                <p>We studied and selected some contextualized metrics that, when combined, can provide many insights to developers 
+                  before they even analyze the code. 
+                  We also aim to present these metrics in a way that facilitates analysis for developers. 
+                  Additionally, we defined a set of <a href="./materials.html">analysis heuristics based on these metrics</a> to ease the process and educate developers 
+                  in their investigations.</p>
             </div> 
     
             </div>
@@ -177,7 +197,7 @@
                     <li>Context-selected and sorted metrics</li>
                     <li>Supported languages: Java (for now)</li>
                     <li>Outputs in different formats: console, CSV, and JSON</li>
-                    <li>ease of filtering results (using the '--top X' option)</li>
+                    <li>ease of filtering results (using the <code>--top</code> option)</li>
                     <li>Several statistics of metrics, like average, median, standard deviation, first quartile, third quartile, amplitude, min/max values, and upper fence (to detect outliers)</li>
                     <li>Contextualized results, to facilitate the analysis and investigation (metric thresholds are available <a href="https://metric-visualization-demo.herokuapp.com/drtools-thresholds.html" target="_blank">here</a>)</li>
                     <li>To visualize graphs of project data, simply use <a href="drtools-metric-visualization.html">drtools-metric visualization</a>.
@@ -193,7 +213,7 @@
             <div class="row">
             <div class="col-lg-12 ftco-animate">
                 <h2 class="mb-3">Context and Metrics</h2>
-                <p>The drtools-metric presents the <b>44 contextualized metrics</b> by summary, namespaces, types, methods, dependencies, and coupling. 
+                <p>The DR-Tools Metric presents the <b>44 contextualized metrics</b> by summary, namespaces, types, methods, dependencies, and coupling. 
                     The following is the list of metrics by context:</p>
                 <ul>
                     <li><b>Summary (15):</b> Total of namespaces, total of types, mean number of types/namespaces, total of lines of code (SLOC), average number of SLOC/types (with median and standard deviation), total of methods, average number of methods/types (with median and standard deviation), total of complexity (CYCLO), and average number of complexity/types (with median and standard deviation)</li>
@@ -228,7 +248,7 @@
           <div class="row">
           <div class="col-lg-12 ftco-animate">
               <h2 class="mb-3">Usage examples</h2>
-              <p>Below we list many examples of using drtools-metric features.</p>
+              <p>Below we list many examples of using DR-Tools Metric features.</p>
               <ul>
                   <li>Viewing tool usage options</li>
                   <p><code>prompt> drtools-metric</code></p>
@@ -286,6 +306,91 @@
           </div>
       </div>
   </section> 
+
+  <section class="ftco-section" id="references-thresholds-section">
+    <div class="col-md-12 text-center heading-section ftco-animate">
+        <h3 class="heading-sidebar">References used to Metric Thresholds                    
+            <a class="btn btn-secondary" data-toggle="collapse" href="#collapseThresholds" 
+                role="button" aria-expanded="true" aria-controls="collapseThresholds"><i class="fa fa-chevron-down"></i>/<i class="fa fa-chevron-up"></i> </a></h3>
+        </h3>
+    </div>
+    <div class="collapse show" id="collapseThresholds">
+    <div class="card">    
+        <table class="table table-hover text_table">
+        <thead>
+            <tr>
+            <th scope="col">References</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Danijel Radjenović, Marjan Heričko, Richard Torkar, Aleš Živkovič,
+                    Software fault prediction metrics: A systematic literature review,
+                    Information and Software Technology,
+                    Volume 55, Issue 8,
+                    2013
+            </td>
+            </tr>
+            <tr>
+            <td>Mariza A.S. Bigonha, Kecia Ferreira, Priscila Souza, Bruno Sousa, Marcela Januário, Daniele Lima,
+                    The usefulness of software metric thresholds for detection of bad smells and fault prediction,
+                    Information and Software Technology,
+                    Volume 115,
+                    2019
+            </td>    
+            </tr>
+            <tr>
+            <td> T. Filo, M. Bigonha, and K. Ferreira, A catalogue of thresholds for 
+                    object-oriented software metrics, in Advances and Trends in Software
+                    Engineering, 2015 The First International Conference on. IARIA,
+                    2015
+            </td>    
+            </tr>
+            <tr>
+            <td>Kecia A.M. Ferreira, Mariza A.S. Bigonha, Roberto S. Bigonha, Luiz F.O. Mendes, Heitor C. Almeida,
+                    Identifying thresholds for object-oriented software metrics,
+                    Journal of Systems and Software,
+                    Volume 85, Issue 2,
+                    2012
+            </td>
+            </tr>
+            <tr>
+            <td>
+                Rangasamy, R.Selvarani & Nair, T.R. & Ramachandran, Muthu & Prasad, Kamakshi.
+                Software Metrics Evaluation Based on Entropy. Handbook of Research on Software 
+                Engineering and Productivity Technologies: Implications of Globalization, 2010 
+            </td>    
+            </tr>        
+            <tr>
+            <td>Robert C. Martin and Micah Martin. 2006. Agile Principles, Patterns, and Practices in C# (Robert C. Martin). 
+                Prentice Hall PTR, Upper Saddle River, NJ, USA
+            </td>    
+            </tr>
+            <tr>
+            <td>P. Oliveira, M. T. Valente and F. P. Lima, Extracting relative thresholds for source code metrics,
+                    2014 Software Evolution Week - IEEE Conference on Software Maintenance, 
+                    Reengineering, and Reverse Engineering (CSMR-WCRE), Antwerp, 2014
+            </td>    
+            </tr>
+            <tr>
+            <td>G. Vale, A benchmark-based method to derive metric thresholds,
+                    Master's Dissertation, UFMG, 2015
+            </td>    
+            </tr>
+            <tr>
+            <td>E. Lima, A. Resende, T. Lethbridge, The Uncomfortable Discrepancies of Software Metric Thresholds and Reference
+                    Values in Literature, ICSEA 2016 : The Eleventh International Conference on Software Engineering Advances, 2016
+            </td>    
+            </tr>        
+            <tr>
+            <td>Checkstyle - Size Violations. <a href="https://checkstyle.sourceforge.io/config_sizes.html" target="_blank">https://checkstyle.sourceforge.io/config_sizes.html</a>, 2019
+            </td>    
+            </tr>
+        </tbody>
+        </table>
+    </div>    
+    </div>
+</section>
 
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
