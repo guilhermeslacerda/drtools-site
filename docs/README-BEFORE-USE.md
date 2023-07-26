@@ -1,5 +1,6 @@
 <img src="https://guilhermeslacerda.github.io/drtools-site/images/logo_drtools.png" width="40%">
 
+
 DR-Tools Code Health
 ====================
 
@@ -414,6 +415,7 @@ In **DR-Tools Code Health**, we have defined a series of commands that allow ana
 Shortcut        Command                                         Description
 ss            smell-summary                    show summary of smells detected
 sco           smell-cooccurrences              show summary of cooccurrences of smells
+scoic         smell-cooccurrences-ic           show summary of cooccurrences of smells (Inter-components Category)
 scot          smell-cooccurrences-types        show summary of cooccurrences of smells (Type Category)
 scom          smell-cooccurrences-methods      show summary of cooccurrences of smells (Method Category)
 scd           criteria-default                 show criteria used (default values)
@@ -589,7 +591,25 @@ TOTAL OF TYPES WITH SMELLS: 3
 
 ### List of Detected Smell Co-Occurrences
 
-The **DR-Tools Code Health** also detects various types of smell co-occurrences, categorized in *type* and *method*. The co-occurrences can indicate certain design anti-patterns that repeat in the project.  
+The **DR-Tools Code Health** also detects various types of smell co-occurrences, categorized in *inter-components*, *type*, and *method*. The co-occurrences can indicate certain design anti-patterns that repeat in the project.  
+
+#### Category: Inter-Components
+
+* **Description:** *Big and complex structures inter-components*
+	* **Smells:** God Class, Insufficient Modularization, Long Method, Complex Method
+	* **Quality Impact:** Size, Complexity
+
+* **Description:** *Complex structures inter-components*
+	* **Smells:** Insufficient Modularization, Complex Method
+	* **Quality Impact:** Complexity
+
+* **Description:** *Big structures inter-components*
+	* **Smells:** God Class, Long Method
+	* **Quality Impact:** Size
+
+* **Description:** *Critical!! Big and complex structures inter-components*
+	* **Smells:** God Class, Insufficient Modularization, Hub-like Modularization, Cyclically Dependent Modularization, Deep Hierarchy, Long Method, Complex Method, Bumpy Road
+	* **Quality Impact:** Size, Complexity, Cohesion, Coupling
 
 #### Category: Type
 

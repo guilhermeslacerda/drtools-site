@@ -580,7 +580,25 @@ TOTAL OF TYPES WITH SMELLS: 3
 
 ### Lista de Co-Ocorrências de Smells Detectadas
 
-O **DR-Tools Code Health** também detecta vários tipos de co-ocorrências de smells, categorizados em *type* e *method*. As co-ocorrências podem indicar certos antipadrões de design que se repetem no projeto. 
+O **DR-Tools Code Health** também detecta vários tipos de co-ocorrências de smells, categorizados em *inter-components*, *type* e *method*. As co-ocorrências podem indicar certos antipadrões de design que se repetem no projeto. 
+
+#### Categoria: Inter-Components
+
+* **Descrição:** *Big and complex structures inter-components*
+	* **Smells:** God Class, Insufficient Modularization, Long Method, Complex Method
+	* **Impacto na Qualidade:** Size, Complexity
+
+* **Descrição:** *Complex structures inter-components*
+	* **Smells:** Insufficient Modularization, Complex Method
+	* **Impacto na Qualidade:** Complexity
+
+* **Descrição:** *Big structures inter-components*
+	* **Smells:** God Class, Long Method
+	* **Impacto na Qualidade:** Size
+
+* **Descrição:** *Critical!! Big and complex structures inter-components*
+	* **Smells:** God Class, Insufficient Modularization, Hub-like Modularization, Cyclically Dependent Modularization, Deep Hierarchy, Long Method, Complex Method, Bumpy Road
+	* **Impacto na Qualidade:** Size, Complexity, Cohesion, Coupling
 
 #### Categoria: Type
 
