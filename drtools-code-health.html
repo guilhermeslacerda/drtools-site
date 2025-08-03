@@ -51,7 +51,7 @@
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="index.html#logo-section" class="nav-link"><span>Home</span></a></li>
 			  <li class="nav-item"><a href="about.html" class="nav-link"><span>About</span></a></li>
-              <li class="nav-item"><a href="materials.html" class="nav-link"><span>Materials & References</span></a></li>
+              <li class="nav-item"><a href="materials.html" class="nav-link"><span>Materials & Resources</span></a></li>
 	          <li class="nav-item"><a href="downloads.html" class="nav-link"><span>Downloads</span></a></li>
 	          <li class="nav-item"><a href="https://github.com/guilhermeslacerda/drtools/" class="nav-link" target="_blank"><span>GitHub</span></a></li>
 	        </ul>
@@ -62,8 +62,8 @@
     <section class="ftco-section" id="header-section">
         <div class="col-md-12 text-center heading-section ftco-animate">
             <h2 class="mb-4"><span>drtools-code health</span></h2>
-            <h3><p>If I download a GitHub project, where are the biggest problems?</p>
-                <p>Where do I start the investigation?</p></h3>
+            <h3><p>If I download a project from GitHub, where are the biggest problems?</p> 
+              <p>Where should I start the investigation?</p></h3>
         </div>
     </section>
     
@@ -72,14 +72,10 @@
             <div class="row">
             <div class="col-lg-12 ftco-animate">
                 <h2 class="mb-3">Description</h2>
-                <p>The DR-Tools Code Health was born from the need to be a simple tool that could help the developer with his daily work.</p>
-
-                <p>
-                  DR-Tools Code Health is a tool that allows for a deeper investigation regarding metrics/statistics, design issues (smells), 
-                  smell co-occurrences, and code elements ranking/prioritization,   
-                  identifying the most problematic parts at different levels of granularity.</p>
+                  <p>DR-Tools Code Health was created to be a simple tool that helps developers with their daily work.</p> 
+                  <p>DR-Tools Code Health enables deeper investigation of metrics and statistics, design issues (smells), smell co-occurrences, 
+                    and ranking/prioritization of code elements, identifying the most problematic parts at various levels of granularity.</p>            
             </div> 
-    
             </div>
         </div>
     </section> 
@@ -195,12 +191,12 @@
             <div class="row">
             <div class="col-lg-12 ftco-animate">
                 <h2 class="mb-3">Requirements and Install Instruction</h2>
-                <ul>
-                    <li>Unique requirement: JRE version 11</li>
-                    <li><a href="downloads.html">Download the tool version</a> and unzip it to a directory</li>
-                    <li>We suggest placing the directory reference in the system PATH, and Done!</li>
-                    <li>More detailed information can be accessed <a href="show-readme.html#installation-and-requirements" target="_blank">here</a></li>
-                </ul>                            
+                  <ul>
+                    <li>Only requirement: JRE version 11</li>
+                    <li><a href="downloads.html">Download the tool</a> and unzip it to a directory</li>
+                    <li>We recommend adding the directory to your system PATH — and you're done!</li>
+                    <li>More detailed information is available <a href="show-readme.html#installation-and-requirements" target="_blank">here</a></li>
+                  </ul>
             </div>
             </div>
         </div>
@@ -211,24 +207,23 @@
             <div class="row">
             <div class="col-lg-12 ftco-animate">
                 <h2 class="mb-3">Main Features</h2>
-                <ul>
-                    <li><b>Modes:</b> Command-line (CLI, using <code>--init</code> and <code>--analyze</code> options) and Interactive usage (command prompt)</li>
+                  <ul>
+                    <li><b>Modes:</b> Command-line (CLI, using <code>--init</code> and <code>--analyze</code> options) and interactive mode (command prompt)</li>
                     <li><b>48 metrics</b> contextualized by summary, namespaces, types, methods, dependencies, and coupling</li>
                     <li>Detects <b>15 smells</b> at the granularities of namespace, type, and method</li>
-                    <li>Detects <b>20 smell co-occurrences</b> categorized by type, method, and inter-components</li>
+                    <li>Detects <b>20 smell co-occurrences</b> categorized by type, method, and inter-component relationships</li>
                     <li>Context-selected and sorted metrics</li>
-                    <li><b>Customization</b> using programming (fluent API) and config file</li>
-                    <li>Statistic analysis of code</li>
+                    <li><b>Customization</b> via programming (fluent API) and configuration file</li>
+                    <li>Statistical analysis of code</li>
                     <li>Supported languages: Java (for now)</li>
-                    <li>Outputs in different formats: console, CSV, and JSON</li>
-                    <li>ease of filtering results (using the <code>--top</code> option)</li>
-                    <li>Implements a <b>prioritization model</b> adopting criteria such as severity, representativity, impact on quality, and degree of intervention.
-                        It is also possible to aggregate the criteria into an global indicator that presents the most problematic code elements at a given granularity, 
-                        called the Code Disease Indicator (CDI).
-                    <li>Download and run!</li>
-                        More information <a href="show-readme.html">here!</a></li>    
-                </ul>                            
-            </div>
+                    <li>Outputs in various formats: console, CSV, and JSON</li>
+                    <li>Easy filtering of results using the <code>--top</code> option</li>
+                    <li>Implements a <b>prioritization model</b> based on criteria such as severity, representativity, impact on quality, and degree of intervention.  
+                        It also aggregates these criteria into a global indicator called the Code Disease Indicator (CDI), which highlights the most problematic code elements at a given granularity.</li>
+                    <li>Download and run!  
+                        More information available <a href="show-readme.html">here</a>.</li>
+                  </ul>
+              </div>
             </div>
         </div>
     </section> 
@@ -240,14 +235,14 @@
               <h2 class="mb-3">Usage Modes</h2>
               <img src="./images/drtools-code-health/drtools-code-health-estrutura.PNG" width="85%"/>
 
-              <p>
-                DR-Tools Code Health Execution Modes: As input, the project's source code and a project configuration file (optional) are used.</p> 
-                
-              <p>This configuration file contains information customized by developers to adapt the project's analyses. 
-                DR-Tools Code Health offers two usage modes: CLI, through the options <code>--init</code> and <code>--analyze</code>, creating directories, configuration files, and analysis results in CSV and JSON formats; 
-                Interactive mode allows developers to analyze the project, observe metrics, statistics, smells, and prioritization via a command prompt.</p>
-              <p>More detailed information about usage modes can be found <a href="show-readme.html#cli-mode">here</a>.</p>                             
-          </div>
+                <p><b>DR-Tools Code Health Execution Modes:</b> The tool takes the project's source code as input, along with an 
+                  optional project configuration file.</p> 
+                  <p>This configuration file contains developer-customized information to tailor the project's analyses. 
+                    DR-Tools Code Health offers two usage modes: - **CLI mode**, using the <code>--init</code> and <code>--analyze</code> 
+                    options, which creates directories, configuration files, and analysis results in CSV and JSON formats; - **Interactive mode**, 
+                    which allows developers to analyze the project and explore metrics, statistics, smells, and prioritization via a command prompt.</p> 
+                    <p>More detailed information about the usage modes can be found <a href="show-readme.html#cli-mode">here</a>.</p>
+            </div>
           </div>
       </div>
   </section> 
@@ -259,15 +254,14 @@
                 <h2 class="mb-3">Internal Process</h2>
                 <img src="./images/drtools-code-health/drtools-code-funcionamento-interno.PNG" width="85%"/>
 
-                <p>How does DR-Tools Code Health work internally?</p> 
-                <p>Starting from the project's source code input and the configuration file (optional), a series of actions are performed 
-                  - (1) loading the project's general information; (2) analyzing the code elements and their respective (3) calculation of 
-                  metrics and statistics considering the current state; (4) loading the detection heuristics for smells and co-occurrences 
-                  based on the previous information; (5) detecting smells and co-occurrences based on the heuristics; (6) computing the ranking 
-                  based on criteria (e.g., severity, impact on quality); (7) prioritizing code elements using individual criteria and the 
-                  aggregated CDI (Code Disease Indicator); and finally, (8) project data ready to be generated in file format (CLI mode) 
-                  or manipulated and queried via the prompt (interactive mode).</p>
-                  <p>More detailed information about modules can be found <a href="show-readme.html#modules">here</a>.</p>                             
+              <p>How does DR-Tools Code Health work internally?</p> <p>Starting with the project's source code and an 
+                optional configuration file, the tool performs a series of steps: (1) loading the project's general information; 
+                (2) analyzing the code elements; (3) calculating metrics and statistics based on the current state; (4) loading detection 
+                heuristics for smells and co-occurrences using the previous information; (5) detecting smells and co-occurrences according 
+                to the heuristics; (6) computing rankings based on criteria such as severity and impact on quality; (7) prioritizing code 
+                elements using individual criteria and the aggregated CDI (Code Disease Indicator); and finally, (8) preparing the project 
+                data for output in file format (CLI mode) or for manipulation and querying via the prompt (interactive mode).</p> 
+                <p>More detailed information about the modules can be found <a href="show-readme.html#modules">here</a>.</p>
             </div>
             </div>
         </div>
@@ -278,9 +272,9 @@
           <div class="row">
           <div class="col-lg-12 ftco-animate">
               <h2 class="mb-3">How can I analyze source code with DR-Tools Code Health?</h2>
-              <p>To demonstrate how DR-Tools Code Health can assist developers, we present a practical case using FindBugs.
-                We evolve step by step, defining each objective and evaluating the results presented by the tool.</p> 
-              <p>All the details can be found <a href="show-readme.html#how-to-analyze-code-with-drtools-code-health">here</a>.</p>                            
+                <p>To demonstrate how DR-Tools Code Health can assist developers, we present a practical case using FindBugs. 
+                  We proceed step by step, defining each objective and evaluating the results provided by the tool.</p> 
+                  <p>All the details can be found <a href="show-readme.html#how-to-analyze-code-with-drtools-code-health">here</a>.</p>          
           </div>
           </div>
       </div>
